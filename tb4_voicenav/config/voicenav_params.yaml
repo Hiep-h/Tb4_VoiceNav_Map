@@ -1,0 +1,13 @@
+speech_node:
+  ros__parameters:
+    stt: auto
+    device: -1
+    lang: vi
+    regions_json_path: ""
+    vosk_model_path: "/home/hiep/tb4_voicenav_data/models/vosk-model-small-vn-0.4"
+    noise_calib_sec: 1.5
+
+voice_nav_node:
+  ros__parameters:
+    regions_json_path: ""
+    fuzzy_match_threshold: 80

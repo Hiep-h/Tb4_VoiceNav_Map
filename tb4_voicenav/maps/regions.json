@@ -1,0 +1,138 @@
+{
+  "map_yaml": "/home/hiep/Tb4_VoiceNav/tb4_voicenav/maps/map.yaml",
+  "resolution": 0.05,
+  "origin": [
+    -10.4,
+    -6.63
+  ],
+  "regions": [
+    {
+      "id": 1,
+      "name": "Phòng ngủ",
+      "aliases": [
+        "bedroom",
+        "phong ngu",
+        "mu",
+        "mũ",
+        "ngu",
+        "nghu"
+      ],
+      "member_models": [
+        "Bed_01_001",
+        "NightStand_01_001",
+        "NightStand_01_002",
+        "Wardrobe_01_001",
+        "ReadingDesk_01_001",
+        "ChairA_01_005"
+      ],
+      "furniture_centroid_m": [
+        -7.450466666666666,
+        1.3668833333333337
+      ],
+      "center_px": [
+        59.0,
+        63.0
+      ],
+      "goal_px": [
+        31.0,
+        91.0
+      ],
+      "goal_m": [
+        -8.85,
+        -0.02999999999999936
+      ],
+      "goal_clearance_m": 0.7992249488830567,
+      "min_required_clearance_m": 0.5,
+      "goal_radius_m_config": 2.0,
+      "goal_radius_m_used": 2.0,
+      "area_px": 21881,
+      "area_m2": 54.70250000000001,
+      "nav2_validated": true
+    },
+    {
+      "id": 2,
+      "name": "Phòng khách",
+      "aliases": [
+        "living room",
+        "phong khach",
+        "hong",
+        "hộng",
+        "khac",
+        "khach"
+      ],
+      "member_models": [
+        "SofaC_01_001",
+        "CoffeeTable_01_001",
+        "TV_01_001",
+        "TVCabinet_01_001"
+      ],
+      "furniture_centroid_m": [
+        -0.1758,
+        -4.550700000000001
+      ],
+      "center_px": [
+        204.0,
+        181.0
+      ],
+      "goal_px": [
+        222.0,
+        189.0
+      ],
+      "goal_m": [
+        0.7000000000000011,
+        -4.93
+      ],
+      "goal_clearance_m": 0.9590698242187501,
+      "min_required_clearance_m": 0.5,
+      "goal_radius_m_config": 2.0,
+      "goal_radius_m_used": 2.0,
+      "area_px": 20431,
+      "area_m2": 51.07750000000001,
+      "nav2_validated": true
+    },
+    {
+      "id": 3,
+      "name": "Phòng bếp",
+      "aliases": [
+        "kitchen",
+        "phong bep",
+        "pre",
+        "pré",
+        "bep",
+        "bép"
+      ],
+      "member_models": [
+        "KitchenTable_01_001",
+        "KitchenCabinet_01_001",
+        "Refrigerator_01_001",
+        "ChairA_01_001",
+        "ChairA_01_002",
+        "ChairA_01_003",
+        "ChairA_01_004"
+      ],
+      "furniture_centroid_m": [
+        6.099614285714286,
+        -1.0196285714285716
+      ],
+      "center_px": [
+        330.0,
+        111.0
+      ],
+      "goal_px": [
+        330.0,
+        131.0
+      ],
+      "goal_m": [
+        6.1,
+        -2.0299999999999994
+      ],
+      "goal_clearance_m": 1.0393798828125,
+      "min_required_clearance_m": 0.5,
+      "goal_radius_m_config": 2.0,
+      "goal_radius_m_used": 2.0,
+      "area_px": 20688,
+      "area_m2": 51.72000000000001,
+      "nav2_validated": true
+    }
+  ]
+}

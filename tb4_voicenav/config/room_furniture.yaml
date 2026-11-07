@@ -1,0 +1,30 @@
+rooms:
+  - name: Phong ngu
+    aliases: [phong ngu, bedroom]
+    goal_radius_m: 2.0
+    model_names:
+      - Bed_01_001
+      - NightStand_01_001
+      - NightStand_01_002
+      - Wardrobe_01_001
+      - ReadingDesk_01_001
+      - ChairA_01_005
+  - name: Phong khach
+    aliases: [phong khach, living room]
+    goal_radius_m: 2.0
+    model_names:
+      - SofaC_01_001
+      - CoffeeTable_01_001
+      - TV_01_001
+      - TVCabinet_01_001
+  - name: Phong bep
+    aliases: [phong bep, kitchen]
+    goal_radius_m: 2.0
+    model_names:
+      - KitchenTable_01_001
+      - KitchenCabinet_01_001
+      - Refrigerator_01_001
+      - ChairA_01_001
+      - ChairA_01_002
+      - ChairA_01_003
+      - ChairA_01_004
