@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <robot name="turtlebot4" xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:include filename="$(find irobot_create_description)/urdf/create3.urdf.xacro" />
-  <xacro:include filename="/home/hiep/Tb4_VoiceNav/tb4_voicenav/tools/rplidar_reduced.urdf.xacro" />
+  <xacro:include filename="$(dirname)/rplidar_reduced.urdf.xacro" />
   <xacro:include filename="$(find turtlebot4_description)/urdf/standard/tower_standoff.urdf.xacro" />
   <xacro:include filename="$(find turtlebot4_description)/urdf/standard/tower_sensor_plate.urdf.xacro" />
   <xacro:include filename="$(find turtlebot4_description)/urdf/standard/weight_block.urdf.xacro" />

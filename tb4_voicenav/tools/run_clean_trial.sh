@@ -7,7 +7,7 @@ GOAL_Y="$3"
 OUT_PREFIX="$4"
 LOG_DIR="$5"
 
-REPO=/home/hiep/Tb4_VoiceNav
+REPO="$(cd "$(dirname "$0")/../.." && pwd)"
 TOOLS_DIR="$REPO/tb4_voicenav/tools"
 MAP_YAML="$REPO/tb4_voicenav/maps/map.yaml"
 

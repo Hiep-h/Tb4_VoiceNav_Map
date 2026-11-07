@@ -11,6 +11,7 @@ docs/EVAL_SUMMARY.md - khong tu ghi file.
 """
 import argparse
 import io
+import os
 import time
 import wave
 
@@ -19,8 +20,9 @@ import sounddevice as sd
 from tb4_voicenav.command_parser import parse_command
 from tb4_voicenav.region_store import RegionStore
 
-DEFAULT_REGIONS_JSON = '/home/hiep/Tb4_VoiceNav/tb4_voicenav/maps/regions.json'
-DEFAULT_VOSK_MODEL_PATH = '/home/hiep/tb4_voicenav_data/models/vosk-model-small-vn-0.4'
+DEFAULT_REGIONS_JSON = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), '..', 'maps', 'regions.json')
+DEFAULT_VOSK_MODEL_PATH = os.path.expanduser('~/tb4_voicenav_data/models/vosk-model-small-vn-0.4')
 SAMPLE_RATE = 16000
 RECORD_SECONDS = 3.0
 

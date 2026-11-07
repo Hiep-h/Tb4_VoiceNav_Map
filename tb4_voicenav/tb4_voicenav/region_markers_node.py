@@ -1,10 +1,13 @@
+import os
+
 import rclpy
 from rclpy.node import Node
 from visualization_msgs.msg import Marker, MarkerArray
 
 from tb4_voicenav.region_store import RegionStore
 
-DEFAULT_REGIONS_JSON = '/home/hiep/Tb4_VoiceNav/tb4_voicenav/maps/regions.json'
+DEFAULT_REGIONS_JSON = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), '..', 'maps', 'regions.json')
 
 
 class RegionMarkersNode(Node):

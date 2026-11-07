@@ -11,8 +11,9 @@ from std_msgs.msg import String
 from tb4_voicenav.command_parser import build_command_phrases, normalize_text
 from tb4_voicenav.region_store import RegionStore
 
-DEFAULT_REGIONS_JSON = '/home/hiep/Tb4_VoiceNav/tb4_voicenav/maps/regions.json'
-DEFAULT_VOSK_MODEL_PATH = '/home/hiep/tb4_voicenav_data/models/vosk-model-small-vn-0.4'
+DEFAULT_REGIONS_JSON = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), '..', 'maps', 'regions.json')
+DEFAULT_VOSK_MODEL_PATH = os.path.expanduser('~/tb4_voicenav_data/models/vosk-model-small-vn-0.4')
 MODELS_DIR = os.path.expanduser('~/tb4_voicenav_data/models')
 GOOGLE_LANG = {'vi': 'vi-VN', 'en': 'en-US'}
 WHISPER_LANG = {'vi': 'vi', 'en': 'en'}
@@ -51,7 +52,7 @@ class SpeechNode(Node):
         device = self.get_parameter('device').value
         self.device = None if device < 0 else device
         self.lang = self.get_parameter('lang').value
-        self.vosk_model_path = self.get_parameter('vosk_model_path').value
+        self.vosk_model_path = os.path.expanduser(self.get_parameter('vosk_model_path').value)
         self.noise_calib_sec = self.get_parameter('noise_calib_sec').value
 
         regions_json_path = self.get_parameter('regions_json_path').value or DEFAULT_REGIONS_JSON

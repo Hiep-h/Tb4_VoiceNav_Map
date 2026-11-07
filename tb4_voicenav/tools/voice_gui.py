@@ -28,7 +28,8 @@ GRAMMAR_WORDS = [
     'khách', 'ngủ', 'bếp', 'a', 'b', 'c', 'hành', 'lang', 'thí', 'nghiệm', '[unk]',
 ]
 GOOGLE_LANG = 'vi-VN'
-DEFAULT_REGIONS = '/home/hiep/Tb4_VoiceNav/tb4_voicenav/maps/regions.json'
+DEFAULT_REGIONS = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), '..', 'maps', 'regions.json')
 WHISPER_MODELS_DIR = os.path.expanduser('~/tb4_voicenav_data/models')
 HERE = os.path.dirname(os.path.abspath(__file__))
 MAPS_DIR = os.path.join(os.path.dirname(HERE), 'maps')

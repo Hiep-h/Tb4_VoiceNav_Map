@@ -6,6 +6,7 @@
 """
 import argparse
 import json
+import os
 import queue
 import time
 
@@ -14,8 +15,9 @@ import numpy as np
 from tb4_voicenav.command_parser import parse_command, build_command_phrases
 from tb4_voicenav.region_store import RegionStore
 
-DEFAULT_REGIONS_JSON = '/home/hiep/Tb4_VoiceNav/tb4_voicenav/maps/regions.json'
-DEFAULT_VOSK_MODEL_PATH = '/home/hiep/tb4_voicenav_data/models/vosk-model-small-vn-0.4'
+DEFAULT_REGIONS_JSON = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), '..', 'maps', 'regions.json')
+DEFAULT_VOSK_MODEL_PATH = os.path.expanduser('~/tb4_voicenav_data/models/vosk-model-small-vn-0.4')
 
 
 def explain(text, region_store):

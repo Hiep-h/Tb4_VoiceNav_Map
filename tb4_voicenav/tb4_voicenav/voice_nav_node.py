@@ -1,4 +1,5 @@
 import functools
+import os
 import time
 
 import rclpy
@@ -15,7 +16,8 @@ from tb4_voicenav.command_parser import (
     NOT_COMMAND, UNKNOWN_REGION, normalize_text, parse_command, strip_diacritics)
 from tb4_voicenav.region_store import RegionStore
 
-DEFAULT_REGIONS_JSON = '/home/hiep/Tb4_VoiceNav/tb4_voicenav/maps/regions.json'
+DEFAULT_REGIONS_JSON = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), '..', 'maps', 'regions.json')
 MAP_FRAME_ID = 'map'
 MIN_COMMAND_CHARS = 3  # bo qua am thanh vun vat nhu "di" tach rieng
 PROGRESS_INTERVAL_S = 3.0

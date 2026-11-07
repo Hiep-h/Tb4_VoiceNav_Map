@@ -1,19 +1,11 @@
 # voice_gui.py
 
-Giao diện thử giọng nói: đếm ngược 3-2-1, hiện "HÃY NÓI!", rồi hiện nội dung đã nói.
+Giao diện điều khiển bằng giọng nói: nút mic bên trái, bản đồ phân vùng bên phải.
 
-    python3 tools/voice_gui.py --stt vosk --parse
-    python3 tools/voice_gui.py --stt google --parse
+    python3 tb4_voicenav/tools/voice_gui.py --stt whisper --parse --ros
 
-SPACE: nói tiếp. ESC: thoát. `--loop`: tự lặp lại sau `--loop-wait` giây (mặc định 3s), không cần nhấn SPACE. `--debug`: hiện thêm độ trễ nhận dạng và các phương án khác.
+- Bấm nút mic để bắt đầu nói, bấm lần nữa hoặc ngừng nói để kết thúc. Nút xám: chờ; đỏ: đang nghe; vàng: đang nhận dạng.
+- `--stt whisper|vosk|google|auto`, `--whisper-model small` (mặc định), `--energy` đặt ngưỡng âm lượng, `--hold-to-talk` giữ để nói, `--no-map` ẩn bản đồ, `--debug` hiện độ trễ.
+- `--parse`: hiện lộ trình đã tách từ câu nói. `--ros`: publish `/voice_text`, đọc `/voice_nav/status` và vẽ vị trí robot, đường đi.
 
-## Chế độ --ros
-
-    python3 tools/voice_gui.py --stt google --parse --ros
-
-Khi bật `--ros`: mỗi câu nhận dạng được (không rỗng) được publish lên `/voice_text`
-để `voice_nav_node` nhận; giao diện đồng thời đọc `/voice_nav/status` và hiện ngay
-dưới dòng nội dung đã nói.
-
-KHÔNG chạy `speech_node` cùng lúc với `voice_gui.py --ros` - cả hai đều publish
-`/voice_text`, chạy cùng lúc sẽ có hai nguồn ghi đè lên nhau trên cùng một topic.
+Không chạy `speech_node` cùng lúc với `voice_gui.py --ros`: cả hai cùng publish `/voice_text`.

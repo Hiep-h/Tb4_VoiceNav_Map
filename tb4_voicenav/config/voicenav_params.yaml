@@ -4,7 +4,7 @@ speech_node:
     device: -1
     lang: vi
     regions_json_path: ""
-    vosk_model_path: "/home/hiep/tb4_voicenav_data/models/vosk-model-small-vn-0.4"
+    vosk_model_path: "~/tb4_voicenav_data/models/vosk-model-small-vn-0.4"
     noise_calib_sec: 1.5
 
 voice_nav_node:
